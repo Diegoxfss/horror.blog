@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Horror movies blog">
+  <meta name="keywords" content="Horror, movies, login">
+  <meta name="author" content="Diego Silva">
+  <link rel="icon" type="image/x-icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTK96sHSXJ-3zhRqrnnK5aEiq5CBAzb5vhaHQ&usqp=CAU">
+  <link rel="stylesheet" href="Movies.css">
+  <script src="Movies.js"></script>
+  <title>Blog - Horror Movies</title>
+</head>
+   <!--This is a review page about the movie IT-->
+   <!--This is just a log in page. The only links working on this page are the submit button(new movies page) and related sites-->
+<body>
+    <!--This is the main navbar at the top of each page. No links  for the log in page-->
+    <div class="topnav" id="myTopnav">
+        <a href="#home" class="active">Home</a>
+        <a href="">New Movies</a>
+        <a href="#contact">Archive</a>
+        <a href="#contact">Contact</a>
+        <a href="#about">About</a>
+        
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
+  <!--This is a side navbar for the related sites-->
+      <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="https://ihorror.com/">ihorror.com</a>
+        <a href="https://feedly.com/i/subscription/feed%2Fhttp%3A%2F%2Ffeeds.feedburner.com%2FBloodyDisgusting">Bloody Disgusting!</a>
+        <a href="https://feedly.com/i/subscription/feed%2Fhttp%3A%2F%2Fhorror-movie-a-day.blogspot.com%2Ffeeds%2Fposts%2Fdefault">Horror Movie A Day</a>
+        <a href="https://www.dreadcentral.com/">Dread Central</a>
+        <a href="https://www.shudder.com/">Shudder</a>
+        <a href="https://www.allhorror.com/">All horror</a>
+          <a href="https://www.netflix.com/gb/browse/genre/8711">Netflix</a>
+            <a href="https://www.horrorhomeroom.com/">Horror Homeroom</a>
+            <a href="https://nightmarenostalgia.com/">Nightmare Nostalgia</a>
+              <a href="https://dailydead.com/">Daily Dead</a>
+      </div>
+      <marquee class="marquee" behavior="scroll" direction="right">Subscribe and be part of our instagram community. talk to us via whatsapp  </marquee>
+      <br><br>
+      <span class="relatedsites" color="white" onclick="openNav()">&#9776; Related Sites</span>
+      <br>
+
+ <!--Carousel with top 5 horror movies as sugestion for users-->
+ <div id="myCarousel" class="carousel slide"  data-ride="carousel">
+  <br>  <br>
+  <!-- Left and right controls -->
+<div class="container">
+    <h2 id="my-heading">Horror Movies Blog </h2>
+    <div class="content">
+        <!-- The content which is placed at the center of the carousel -->
+        <div class="carousel-content">
+        </div>
+        <br> <br>
+        <div class="slideshow">
+            <!-- carousel wrapper which contains all images -->
+            <div class="slideshow-wrapper">
+                <div class="slide">
+                    <img class="slide-img" alt="The exorcist movie 1973" src="1973.jpg">
+                </div>
+                <div class="slide">
+                    <img class="slide-img" alt="Ther blair witch project movie" src="blair.jpg">
+                </div>
+                <div class="slide">
+                    <img class="slide-img" alt="child's play movie" src="chucky.jpg">
+                </div>
+                <div class="slide">
+                    <img class="slide-img"  alt="paranormal activity movie" src="paranormal.jpg">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<form onsubmit="analyseForm()">
+<label for="fname">First Name :
+  <input type="text" id="fname" value="Enter First Name"></label>
+  <input type="submit"></form>
+
+  <br>
+  <div class="login-box">
+    <h2>Login</h2>
+    <form>
+    <div class="user-box">
+    <input type="text" name="" required="">
+    <label>Username</label>
+    </div>
+    <div class="user-box">
+    <input type="password" name="" required="">
+    <label>Password</label>
+    </div>
+    <A href="indexHOME.htmll">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    Submit
+    </a>
+    </form>
+    </div>
+  
+
+
+
+
+
+</body>
+</html>

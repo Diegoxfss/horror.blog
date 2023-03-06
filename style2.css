@@ -1,0 +1,49 @@
+/*style 2 is just for the quiz index */
+
+h1,h2,h3 {
+    text-align: center;
+	font-size: 40px;
+	margin: 0;
+	padding-top: 10px;
+	color: hwb(0 6% 35%);
+	text-transform: capitalize; 
+	text-shadow: 2px 2px 5px rgb(7, 2, 2);
+}
+
+p {
+
+text-align: center;
+font-size: 40px;
+margin: 0;
+padding-top: 10px;
+color: hwb(0 6% 35%);
+text-transform: capitalize; 
+text-shadow: 2px 2px 5px rgb(7, 2, 2);
+
+}
+
+.myArray {
+	text-align: center;
+	font-size: 40px;
+	margin: 0;
+	padding-top: 10px;
+	color: hwb(0 6% 35%);
+	text-transform: capitalize; 
+	text-shadow: 2px 2px 5px rgb(7, 2, 2);
+	
+}
+
+#output {
+	font-size: 18px;
+	text-align: center;
+  }
+
+#container {
+	text-align: center;
+
+}
+
+body {
+    background: url("https://media.tenor.com/hE0T8D0GpXsAAAAC/joinblink-blink.gif") repeat; 
+
+}

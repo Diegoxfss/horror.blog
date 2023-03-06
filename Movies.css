@@ -1,0 +1,615 @@
+ /* body configuration */
+
+html, body{
+  background: #E3E3D8;
+  font-family: sans-serif;
+  padding: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+  background-image: black;
+  background-color: rgb(5, 3, 3);
+  color: rgb(239, 232, 232);
+  font-size: 25px;
+  height:100%;
+}
+/*google seach container at the navbar*/
+.search-container {
+  display: flex;
+  align-items: center;
+}
+
+.search-container input[type=text] {
+  flex-grow: 1;
+  margin-right: 10px;
+}
+ /* the following is a try of making it responsive. 
+ /* Add styles for phones */
+ @media only screen and (max-width: 600px) {
+  /* Adjust the logo size */
+  .logo {
+    width: 50px;
+    height: 50px;
+  }
+  /* Center the header text */
+  .header {
+    text-align: center;
+  }
+  /* Reduce the margin between the navbar and the content */
+  .topnav {
+    margin-top: 50px;
+  }
+  /* Adjust the width of the search bar */
+  form {
+    width: 100%;
+  }
+}
+/* Add styles for tablets and desktops */
+@media only screen and (min-width: 601px) {
+  /* Adjust the logo size */
+  .logo {
+    width: 75px;
+    height: 75px;
+  }
+  /* Add a margin to the header text */
+  .header {
+    margin-left: 20px;
+  }
+  /* Add a margin to the navbar */
+  .topnav {
+    margin-top: 20px;
+  }
+  /* Adjust the width of the search bar */
+  form {
+    width: 300px;
+  }
+}
+
+ /* headings, paragraphs and images styles */
+
+h1,h2,h3,h4,h5,h6{ 
+  text-align: center;
+}
+
+p{
+  font-size: 20px;
+  text-align: center;
+}
+
+img{
+  box-shadow: 10px 20px 40px #000000;
+  border: 2px solid #454444;
+  padding: 5px;
+  border-radius: 5px;
+  
+}
+
+ /* This is again a try of making the blog responsive for phones, tablets and desktops */
+.responsive-img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+@media only screen and (min-width: 768px) {
+  /* styles for tablets */
+  .responsive-img {
+    max-width: 75%;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  /* styles for laptops */
+  .responsive-img {
+    max-width: 50%;
+  }
+}
+
+ /* displaying all links inline-block for the homepage(trailer review) */
+a {
+  color: rgb(182, 39, 39);
+  text-decoration: none;
+  padding: 40px;
+  display: inline-block;
+}
+
+ /* shadow for the links.  */
+a:hover {
+  box-shadow: 2px 32px 50px rgba(183, 92, 92, 0.3);
+  border-radius: 10%;
+}
+
+.text{
+  color: rgb(84, 80, 92);
+  font-size: 16px;
+  text-align:right;
+}
+
+/* marquee style to reduce font size */
+.marquee{
+  font-size: medium;
+}
+
+ /* instagram, twitter and whatsapp logos . there is a class for them to make it easier to adjust */
+
+.logo{
+  height: 25px;
+  width: 50px;
+}
+
+ /* card display at the home page for all the film reviews  */
+.card-deck {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.card {
+  box-shadow: 10px 80px 25px #000000;
+  border: 1px solid #1e0303;
+  margin-bottom: 20px;
+  width: 400px;
+  display: inline-block;
+  vertical-align: top;
+  background: #050202;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.card:hover {
+  box-shadow: 0px 0px 25px 10px red;
+}
+
+.card .card-img-top {
+  width: 310px;
+  height: 300px; /* adjust as needed */
+  object-fit: cover;
+  transition: all 0.5s ease;
+  box-shadow: none;
+}
+
+.card .card-img-top:hover {
+  box-shadow: 0px 2px 2px rgb(195, 48, 209);
+}
+
+
+
+/* dark mode button. letters become red and the image on the link shows at the background. */
+.dark-mode {
+  background-color: black;
+  color: rgb(215, 120, 120);
+  background-image: url("data:image/jpeg;base64,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");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+ 
+}
+
+/* this is the topnave style */
+  .topnav {
+    overflow: hidden;
+    background-color: #333;
+  }
+  /* topnav's links */
+  .topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+    /* topnav's links hover */
+  .topnav a:hover {
+    background-color: #ddd;
+    color: rgb(205, 25, 25);
+  }
+
+    /* topnav's links hover */
+  .topnav a.active {
+    background-color: #aa0404;
+    color: white;
+  }
+  
+     /* this is part of the responsive style of the navbar */
+  .topnav .icon {
+    display: none;
+  }
+  
+  @media screen and (max-width: 600px) {
+    .topnav a:not(:first-child) {display: none;}
+    .topnav a.icon {
+      float: right;
+      display: block;
+    }
+  }
+  
+  @media screen and (max-width: 600px) {
+    .topnav.responsive {position: relative;}
+    .topnav.responsive .icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    .topnav.responsive a {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+  }
+
+
+
+  /* side nav style - for the related sites */
+
+  .reatedsites{
+  font-size:30px;cursor:pointer;
+  transform: matrix3d(5);
+
+  }
+
+  .sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+  }
+  
+  .sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .sidenav a:hover {
+    color: #e92626;
+  }
+  
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
+
+  /* carousel style. There is a small slide with random movies just to fill up the page with more stuff */
+
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    width: 700px;
+    height: 600px;
+  }
+  .main-heading {
+    padding: 2rem 0 2rem 0;
+  }
+  .content {
+    position: relative;
+  }
+  .carousel-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    text-align: center;
+    z-index: 50;
+  }
+  .carousel-heading {
+    font-size: 3rem;
+    color: #308d46;
+    margin-bottom: 1rem;
+    text-align: left;
+  }
+  .carousel {
+    margin-bottom: 0;
+  }
+  
+  .gallery {
+    margin-top: 0px;
+  }
+  
+  .slideshow {
+    height: 90%;
+    overflow: hidden; 
+    position: relative;
+  }
+  
+  .slideshow-wrapper {
+    display: flex; 
+    width: 400%;
+    height: 80%;
+    position: relative;
+    animation: slideshow 50s infinite;
+   }
+  
+  .slide {
+    width: 100%;
+    height: 80%;
+  }
+  .slide-img {
+    width: 100%;
+    height: 50%;
+    object-fit:fill; 
+  }
+  
+  @keyframes slideshow {
+    0%  { left: 0; }
+    10% { left: 0; }
+    15% { left: -100%; }
+    25% { left: -100%; }
+    30% { left: -200%; }
+    40% { left: -200%; }
+    45% { left: -300%; }
+    55% { left: -300%; }
+    60% { left: -200%; }
+    70% { left: -200%; }
+    75% { left: -100%; }
+    85% { left: -100%; }
+    90% { left: 0%; }
+  }
+
+  /* log in box styles. This is for the indexlogin.html page */
+  html {
+    height: 100%;
+    }
+    body {
+    margin:0;
+    padding:0;
+    font-family: sans-serif;
+    background: linear-gradient(#141e30, #243b55);
+    }
+    .login-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    padding: 40px;
+    transform: translate(-50%, -50%);
+    background: rgba(0,0,0,.5);
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(0,0,0,.6);
+    border-radius: 10px;
+    }
+    .login-box h2 {
+    margin: 0 0 30px;
+    padding: 0;
+    color: #ece0e0;
+    text-align: center;
+    }
+    .login-box .user-box {
+    position: relative;
+    }
+    .login-box .user-box input {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #d93838;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 1px solid #c48b8b;
+    outline: none;
+    background: transparent;
+    }
+    .login-box .user-box label {
+    position: absolute;
+    top:0;
+    left: 0;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fffdfa;
+    pointer-events: none;
+    transition: .5s;
+    }
+    .login-box .user-box input:focus ~ label,
+    .login-box .user-box input:valid ~ label {
+    top: -20px;
+    left: 0;
+    color: #e02d2d;
+    font-size: 12px;
+    }
+    .login-box form a {
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    color: #f03232;
+    font-size: 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: .5s;
+    margin-top: 40px;
+    letter-spacing: 4px
+    }
+    .login-box a:hover {
+    background: #fc1010;
+    color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #ebf0f1,
+    0 0 25px #e71818,
+    0 0 50px #9e8c8a,
+    0 0 100px #e61f1f;
+    }
+    .login-box a span {
+    position: absolute;
+    display: block;
+    }
+    .login-box a span:nth-child(1) {
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #f77474);
+    animation: btn-anim1 1s linear infinite;
+    }
+    @keyframes btn-anim1 {
+    0% {
+    left: -100%;
+    }
+    50%,100% {
+    left: 100%;
+    }
+    }
+    .login-box a span:nth-child(2) {
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, #03e9f4);
+    animation: btn-anim2 1s linear infinite;
+    animation-delay: .25s
+    }
+    @keyframes btn-anim2 {
+    0% {
+    top: -100%;
+    }
+    50%,100% {
+    top: 100%;
+    }
+    }
+    .login-box a span:nth-child(3) {
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent, #03e9f4);
+    animation: btn-anim3 1s linear infinite;
+    animation-delay: .5s
+    }
+    @keyframes btn-anim3 {
+    0% {
+    right: -100%;
+    }
+    50%,100% {
+    right: 100%;
+    }
+    }
+    .login-box a span:nth-child(4) {
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, #03e9f4);
+    animation: btn-anim4 1s linear infinite;
+    animation-delay: .75s
+    }
+    @keyframes btn-anim4 {
+    0% {
+    bottom: -100%;
+    }
+    50%,100% {
+    bottom: 100%;
+    }
+    }
+
+    .gallery__img {
+      width: 40%;
+      height: 40%;
+      object-fit: cover;
+  }
+
+ /* review pages - images adjusted. I started adjusting the review from the movie IT. It's a small word and can fit all other reviews. */
+ /* images are reduced to make it responsive */
+  .it {
+    box-shadow: 10px 80px 25px #000000;
+    border: 2px solid #454444;
+    padding: 5px;
+    border-radius: 10px;
+    width: 300px;
+    height: 250px; 
+}
+
+ 
+
+ /* user comments  on the movie reviews */
+ .formcomments {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+label {
+  margin-right: 10px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+input[type="submit"] {
+  background-color: #ff0000;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #d90000;
+}
+
+button{
+  color:black;
+}
+
+.subscribe{
+  width:200px;
+  height:200px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+/*homepage form */
+#blog-post label {
+  display: inline-block;
+  width: 100px; /* adjust as needed */
+  text-align: right;
+  margin-right: 10px;
+  margin-bottom: 15px;
+}
+
+#contact-form {
+  border: 1px solid #c11313;
+  padding: 20px;
+  margin: 20px;
+}
+label {
+  display: inline-block;
+  width: 100px;
+  text-align: right;
+  margin-right: 10px;
+}

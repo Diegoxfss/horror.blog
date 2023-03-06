@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Horror movies blog">
+  <meta name="keywords" content="Horror, movies, Home">
+  <meta name="author" content="Diego Silva">
+  <link rel="icon" type="image/x-icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTK96sHSXJ-3zhRqrnnK5aEiq5CBAzb5vhaHQ&usqp=CAU">
+  <link rel="stylesheet" href="Movies.css">
+  <script src="Movies.js"></script>
+  <script src="index.sql"></script>
+  <title>Blog - Horror Movies</title>
+  </head>
+   <!--Home Page-->
+<body>
+  <marquee class="marquee" behavior="scroll" direction="right">Subscribe and be part of our instagram community. talk to us via whatsapp 07750-xxx xxx </marquee>
+  <img  width="1205 " height="300" align="center" alt="gl12 horror movies blog" src="download.jpg">
+  <br> 
+    <!--This is the main navbar at the top of each page-->
+    <div class="topnav" id="myTopnav">
+      <a href="indexHOME.html" class="active">Home</a>
+      <a href="indexNEW.html">New Movies</a>
+      <a href="indexARCHIVE.html">Archive</a>
+      <a href="indexCONTACT.html">Contact</a>
+      <a href="indexABOUT.html" >About</a>
+      <a href="indexSUBSCRIBE.html" >Subscribe</a>
+      <a href="indexQUIZ.html">Quiz</a>
+        <div class="search-container">
+          <form action="https://www.google.com/search">
+            <input type="text" name="q" placeholder="Search Google" autocomplete="off">
+            <input type="submit" value="Search">
+          </form>
+        </div>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars"></i> </a>
+      </div>
+  <!--This is a side navbar for the related sites-->
+     <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <a href="https://ihorror.com/">ihorror.com</a>
+      <a href="https://feedly.com/i/subscription/feed%2Fhttp%3A%2F%2Ffeeds.feedburner.com%2FBloodyDisgusting">Bloody Disgusting!</a>
+      <a href="https://feedly.com/i/subscription/feed%2Fhttp%3A%2F%2Fhorror-movie-a-day.blogspot.com%2Ffeeds%2Fposts%2Fdefault">Horror Movie A Day</a>
+      <a href="https://www.dreadcentral.com/">Dread Central</a>
+      <a href="https://www.shudder.com/">Shudder</a>
+      <a href="https://www.allhorror.com/">All horror</a>
+        <a href="https://www.netflix.com/gb/browse/genre/8711">Netflix</a>
+          <a href="https://www.horrorhomeroom.com/">Horror Homeroom</a>
+          <a href="https://nightmarenostalgia.com/">Nightmare Nostalgia</a>
+            <a href="https://dailydead.com/">Daily Dead</a>
+    </div>
+      <!--related sites button-->
+      <span class="relatedsites" color="white" onclick="openNav()">&#9776;Related Sites</span> 
+        <!--dark mode  button--> 
+      <button onclick="sayHi()">click</button> <button onclick="myFunction2()">dark mode</button> 
+        <!--card display - movies to be reviewd on the blog--> 
+      <div class="card-deck">
+        <div class="card">
+            <!--There is a link hidden under the film image. It's the same for all images displayed inside the cards-->
+         <a href="https://gifdb.com/images/high/it-chapter-pennywise-attack-kql0kp5b81t3y51d.gif"><img src="it.jpg" class="card-img-top" alt="it 2017 (movie) banner "></a> 
+          <div class="card-body">
+            <h5 class="card-title">IT (2017)</h5>
+            <br>
+            <p class="card-text">It (titled onscreen as It Chapter One) is a 2017 American supernatural horror film directed by Andy Muschietti and written by Chase Palmer, Cary Fukunaga, and Gary Dauberman. It is the first of a two-part adaptation of the 1986 novel of the same name by Stephen King, primarily covering the first chronological half of the book.</p>
+          </div>
+          <br>
+          <p><a href="https://www.youtube.com/watch?v=xKJmEC5ieOk">Trailer</a>    <a href="index.REVIEWIT.html">Review</a></p>
+          <br>
+          <div class="card-footer">
+            <small class="text">Last updated 3 mins ago</small>
+          </div>
+        </div>
+        <div class="card">
+          <a href="https://media.tenor.com/ZqZlNOFKVYIAAAAC/activity-ghost.gif"><img src="paranormal.jpg" class="card-img-top" alt="paranormal activity movie 2017"></a>
+          <div class="card-body">
+            <h5 class="card-title">Paranormal Activity - 2007</h5>
+            <br>
+            <p class="card-text">produced, written, directed, photographed and edited by Oren Peli. It centers on a young couple (Katie Featherston and Micah Sloat) who are haunted by a supernatural presence in their home. They then set up a camera to document what is haunting them. </p>
+          </div>
+          <br> <br> 
+          <p><a href="https://www.youtube.com/watch?v=F_UxLEqd074">Trailer</a>   <a href="indexREVIEWPARANORMAL.html">Review</a></p>
+          <br> <br> 
+          <div class="card-footer">
+            <small class="text">Last updated 3 mins ago</small>
+          </div>
+        </div>
+        <div class="card">
+          <a href="https://media1.giphy.com/media/WGU8HrB80wjVC/giphy.gif"><img src="chucky.jpg" class="card-img-top" alt="chucky doll from child's play film"></a>
+          <div class="card-body">
+            <h5 class="card-title">Child's Play (1988)</h5>
+            <br>
+            <p class="card-text">A single mother gives her son a much sought-after doll for his birthday, only to discover that it is possessed by the soul of a serial killer.</p>
+          </div>
+          <br> <br> <br>  <br> 
+          <p><a href="https://www.youtube.com/watch?v=F_UxLEqd074">Trailer</a>   <a href="indexREVIEWCHILDS.html">Review</a></p>
+          <br>  <br>
+          <div class="card-footer">
+            <small class="text">Last updated 3 mins ago</small>
+          </div>
+        </div>
+      </div>
+      <div class="card-deck">
+        <div class="card">
+          <a href="https://i.pinimg.com/originals/5f/f9/5a/5ff95a731d3eefd2723aa0975ce7f057.gif"><img src="insidious.jpg" class="card-img-top" alt="insidious movie"></a>
+          <div class="card-body">
+            <h5 class="card-title">Insidious (2010)</h5>
+            <br>
+            <p class="card-text">The story centers on a married couple whose boy inexplicably enters a comatose state and becomes a vessel for a variety of demonic entities in an astral plane.</p>
+          </div>
+          <br><br>
+          <p><a href="https://www.youtube.com/watch?v=zuZnRUcoWos">Trailer</a>    <a href="indexREVIEWINSIDIOUS.html">Review</a></p>
+          <div class="card-footer">
+            <br>
+            <small class="text">Last updated 3 mins ago</small>
+          </div>
+        </div>
+        <div class="card">
+          <a href="https://media.tenor.com/9KWEdmYy02EAAAAC/the-ring-crawl.gif"><img src="ring.jpg" class="card-img-top" alt="the ring"></a>
+          <div class="card-body">
+            <h5 class="card-title">The Ring (2002)</h5>
+            <br>
+            <p class="card-text">The plot centers on Rachel Keller, a journalist who must figure out a way to escape death after watching a cursed videotape that seemingly kills the viewer seven days after viewing it.</p>
+          </div>
+          <br>
+          <p><a href="https://www.youtube.com/watch?v=biTPsC-fz7A">Trailer</a>    <a href="indexREVIEWTHERING.html">Review</a></p>
+          <div class="card-footer">
+            <br>
+            <small class="text">Last updated 3 mins ago</small>
+          </div>
+        </div>
+        <div class="card">
+          <a href="https://media.tenor.com/SJWcCLLOP0kAAAAC/freddy-krueger-horror.gif"><img src="elm.jpg" class="card-img-top" alt="A nightmare on Elm street"></a>
+          <div class="card-body">
+            <h5 class="card-title">A Nightmare on Elm Street (1985)</h5>
+            <br>
+            <p class="card-text">A young girl realises that she must stay awake at any cost to avoid a clawed killer who wants to murder her and her friends one by one in their dreams.</p>
+          </div>
+          <br><br>
+          <p><a href="https://www.youtube.com/watch?v=dCVh4lBfW-c&t=12s">Trailer</a>    <a href="">Review</a></p>
+          <div class="card-footer">
+            <br>
+            <small class="text">Not reviewd yet</small>
+          </div>
+        </div>
+      </div>
+      <div class="card-deck">
+        <div class="card">
+          <a href="https://thumbs.gfycat.com/GratefulDistinctAzurevasesponge-size_restricted.gif"><img src="1973.jpg" class="card-img-top" alt="the exorcist(1973)"></a>
+          <div class="card-body">
+            <h5 class="card-title">The Exorcist (1973)</h5>
+            <p class="card-text">When a teenage girl is possessed by a mysterious entity, her mother seeks the help of two priests to save her daughter.</p>
+          </div>
+          <p><a href="https://www.youtube.com/watch?v=YDGw1MTEe9k">Trailer</a>    <a href="">Review</a></p>
+          <div class="card-footer">
+            <br>   <br>
+            <small class="text">Not reviewd yet</small>
+          </div>
+        </div>
+        <div class="card">
+          <a href="https://64.media.tumblr.com/cab894ca69df4924ae3f3b8c5612a2c4/tumblr_oh4l5oxDsv1r2aobgo5_r1_250.gif"><img src="nun.jpg" class="card-img-top" alt="The nun"></a>
+          <div class="card-body">
+            <h5 class="card-title">The Nun</h5>
+            <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+          </div>
+          <br>
+          <p><a href="https://www.youtube.com/watch?v=YDGw1MTEe9k">Trailer</a>    <a href="">Review</a></p>
+          <div class="card-footer">
+            <br><br>
+            <small class="text">Not reviewd yet</small>
+          </div>
+        </div>
+        <div class="card">
+         <a href="http://24.media.tumblr.com/8069eaa4a139486749ce516d0b5c1bd1/tumblr_my6r1uEeFu1rp0vkjo1_500.gif"><img src="dra.jpg" class="card-img-top" alt="Bram stoker's Dracula"></a> 
+          <div class="card-body">
+            <h5 class="card-title">Bram Stoker's Dracula</h5>
+            <p class="card-text">Bram Stoker's Dracula is a 1992 American Gothic horror film directed and produced by Francis Ford Coppola, based on the 1897 novel Dracula by Bram Stoker.</p>
+          </div>
+          <p><a href="https://www.youtube.com/watch?v=fgFPIh5mvNc">Trailer</a>    <a href="">Review</a></p>
+          <div class="card-footer">
+            <br>
+            <small class="text">Not reviewd yet</small>
+          </div>
+        </div>
+      </div>
+      <br> <br>   
+        <!--form for new review post-->
+  <h6 align="left"> Add New Review</h6>
+<div id="blog-post">
+  <!-- HTML form -->
+<form action="indexHOME.html" method="post" onsubmit="return analyseForm()"  id="post-form" autocomplete="off">
+  <label for="title">Title</label>
+  <input type="text" id="title" name="title" required>
+
+  <label for="date-input">Date</label>
+  <input name="date" type="date" value="2023-03-06" required>
+
+  <label for="author">Author</label>
+  <input type="text" id="author" name="author" required>
+
+  <label for="content">Content</label>
+  <textarea id="content" name="content" required></textarea>
+
+  <label for="file">File</label>
+  <input type="file" id="file" name="file">
+<!-- the alert of submited will show if you press F5 after submiting the form-->
+  <button type="submit">Submit</button>
+</form>
+</div>
+<br>  <br>  <br>
+  <!--creepy music-->
+<audio controls autoplay style="background-color: #222; color: #fff;">
+  <source src="Horror-Long-Version.mp3" type="audio/mpeg">
+</audio>
+  <br <br>
+  <br><br
+  <br><br>
+  <br><br>
+  <br><br>
+  <br><br>
+       <!--Carousel with horror movies as sugestion for users-->
+       <div id="myCarousel" class="carousel slide"  data-ride="carousel">
+  <!-- Left and right controls -->
+<div class="container">
+  <br> 
+    <h2 id="my-heading"> </h2>
+    <div class="content">
+        <!-- The content which is placed at the center of the carousel -->
+        <div class="carousel-content">
+        </div> 
+        <div class="slideshow">
+            <!-- carousel wrapper which contains all images -->
+            <div class="slideshow-wrapper">
+                <div class="slide">
+                    <img class="slide-img" alt="The exorcist movie 1973" src="1973.jpg">
+                </div>
+                <div class="slide">
+                    <img class="slide-img" alt="Ther blair witch project movie" src="blair.jpg">
+                </div>
+                <div class="slide">
+                    <img class="slide-img" alt="child's play movie" src="chucky.jpg">
+                </div>
+                <div class="slide">
+                    <img class="slide-img"  alt="paranormal activity movie" src="paranormal.jpg">
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+<br><br><br><br><br>
+        <footer>
+          <div class="container"
+              <div class="footer">
+                  <div class="col-sm-4 col-md-5 item">
+                      <p><img src="bfi.png" alt="british film institute" ></p>
+                           </div>
+                           <br><br>
+                  <div class="footer">
+                      <h5><img src="dre.jpg" alt="drexel horror movie club"></h5>
+                  </div>
+                  <br><br>
+                  <div class="footer">
+                      <h5><img src="fest.jpg" alt="horror movie festival" ></h5> 
+                  </div>  
+                  </div> 
+                </div>
+                  <br>
+              </footer>  
+       </body>
+       </html>

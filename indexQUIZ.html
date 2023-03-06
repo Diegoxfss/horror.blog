@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Horror movies blog">
+  <meta name="keywords" content="Horror, movies, quiz">
+  <meta name="author" content="Diego Silva">
+  <link rel="icon" type="image/x-icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTK96sHSXJ-3zhRqrnnK5aEiq5CBAzb5vhaHQ&usqp=CAU">
+  <link rel="stylesheet" href="Movies.css">
+  <script src="Movies.js"></script>
+  <title>Blog - Horror Movies</title>
+</head>
+   <!--bot quiz page-->
+<body>
+  <marquee class="marquee" behavior="scroll" direction="right">Subscribe and be part of our instagram community. talk to us via whatsapp 07750-xxx xxx </marquee>
+  <img  width="1205 " height="300" align="center" alt="gl12 horror movies blog" src="download.jpg">
+  <br> 
+    <!--This is the main navbar at the top of each page-->
+    <div class="topnav" id="myTopnav">
+      <a href="indexHOME.html" class="active">Home</a>
+      <a href="indexNEW.html">New Movies</a>
+      <a href="indexARCHIVE.html">Archive</a>
+      <a href="indexCONTACT.html">Contact</a>
+      <a href="indexABOUT.html" >About</a>
+      <a href="indexSUBSCRIBE.html" >Subscribe</a>
+      <a href="indexQUIZ.html">Quiz</a>
+        <div class="search-container">
+          <form action="https://www.google.com/search">
+            <input type="text" name="q" placeholder="Search Google" autocomplete="off">
+            <input type="submit" value="Search">
+          </form>
+        </div>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars"></i> </a>
+      </div>
+  <!--This is a side navbar for the related sites-->
+     <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <a href="https://ihorror.com/">ihorror.com</a>
+      <a href="https://feedly.com/i/subscription/feed%2Fhttp%3A%2F%2Ffeeds.feedburner.com%2FBloodyDisgusting">Bloody Disgusting!</a>
+      <a href="https://feedly.com/i/subscription/feed%2Fhttp%3A%2F%2Fhorror-movie-a-day.blogspot.com%2Ffeeds%2Fposts%2Fdefault">Horror Movie A Day</a>
+      <a href="https://www.dreadcentral.com/">Dread Central</a>
+      <a href="https://www.shudder.com/">Shudder</a>
+      <a href="https://www.allhorror.com/">All horror</a>
+        <a href="https://www.netflix.com/gb/browse/genre/8711">Netflix</a>
+          <a href="https://www.horrorhomeroom.com/">Horror Homeroom</a>
+          <a href="https://nightmarenostalgia.com/">Nightmare Nostalgia</a>
+            <a href="https://dailydead.com/">Daily Dead</a>
+    </div>
+      <span class="relatedsites" color="white" onclick="openNav()">&#9776;Related Sites</span>  
+      <button onclick="sayHi()">click</button> <button onclick="myFunction2()">dark mode</button> 
+      <br> 
+      <center>  <div id="output" class="bot-output"></div>
+      <div id="container">
+    <input type="text" size="100" id="input" value=""></center>
+    <div class='myArray'></div>
+</div>
+
+<!-- I believe the external link for the bot.js didn't work because there is a jquery source. But it's linked correctly--->
+<script src="bot.js"></script> 
+
+<!--  the following div was a try of adding style to the variable myArray (Outputs for Random answers are happening outside the container and I tried to put answers styled like all other answers.) -->  
+
+
+<!--  jquery for the bot frame -->      
+<script src="https://code.jquery.com/jquery-3.0.0.js" integrity="sha256-jrPLZ+8vDxt2FnE1zvZXCkCcebI/C8Dt5xyaQBjxQIo=" crossorigin="anonymous"></script>
+</div> 
+
+<script>
+  	// Questions start on 0. then, each if condition has a crescent order(1,2,3,4,5,6,7,8) // 
+    var questionNum = 0;													
+    var question = '<h1> Hello. what is your name & where are you from ? </h1>';		
+
+   // store id="output" in output variable // 
+    var output = document.getElementById('output');				
+    output.innerHTML = question;
+
+  
+    // now find the array with random answers - The answers are being displayed outside the container because I don't know how to style javascrip variables yet// 
+  const myArray = [ 'unsure for now', 'try again', 'Dont think so', 'Dont count on it', 'Not looking too good probably'];
+
+   const scale = [(id=1,' the edge you can only go up from here'), 
+   (id=2,' Things will get better. '),
+   (id=3, ' Thigns will get better'),
+   (id=4, ' is nearly average. nothing to worry'),
+   (id=5, ' amazing. Adopt a pet.'),
+   (id=6,' above the average. you are fine'),
+   (id=7, ' means good already.'),
+   (id=8, ' good that you are felling well'),
+   (id=9, ' wow what happened ? I am happy for you'),
+   (id=10, ' can you actually win the lottery ?')];
+
+   
+    // The name of the function is bot // 
+    function bot() { 
+    var input = document.getElementById("input").value;
+    console.log(input);
+
+    // bot will answer hello + input // 
+    if (questionNum == 0) {
+    output.innerHTML = '<h2>hello ' + input + '!</h2>';// output response
+    document.getElementById("input").value = "";   		// clear text box
+    question = '<h2>How are you felling on a scale from 1-10 ?</h2>';		    	// load next question		
+    setTimeout(timedQuestion, 2000);									// output next question after 2sec delay
+    }
+    // bot will answer according to the number (scale from 1 to 10 ) - array scale // 
+    else if (questionNum == 1) {
+    output.innerHTML = id = scale.find(id => input);
+    console.log(id)
+    question =  '<h1>How old are you?</h1>';				      	
+    setTimeout(timedQuestion, 2000);
+    }   
+    // this condition has a random number as an answer for the bots age. // 
+    else if (questionNum == 2) {
+    output.innerHTML = '<h1>So, you were born in ' + (2023 - input) + '.  I am ' +  Math.round(input + (Math.random() *7 )) +' years old.  Lets test your knowledge on Horror. Put on dark mode for a better experience. </h1>';
+    document.getElementById("input").value = "";   		// clear text box
+    question = '<h1> When was the first exorcist movie released ? <h1>';
+    setTimeout(timedQuestion, 6000);
+    }
+    // bot does some multiplication and then asks for a random  question // 
+    else if (questionNum == 3) {
+    output.innerHTML  = '<h1>  ' + input +  ' ? The Exorcist is a 1973 American supernatural horror film directed by William Friedkin and written for the screen by William Peter Blatty, based on his 1971 novel of the same name. ' ; '</h1>';  
+    document.getElementById("input").value = "";   		// clear text box
+    question = '<h1> Lets see if you know the blog well. How is the vilain in Childs play(1988) called ? </h1>';
+    setTimeout(timedQuestion, 6000);	
+    }
+    else if (questionNum == 4) {
+    output.innerHTML = '<h1> His name is Charles Lee Ray. He uses voodoo to transfer his soul into a doll named Chucky.</h1>';
+    document.getElementById("input").value = "";   		// clear text box
+    question =  '<h1> How many children do the couple from Insidious(2010) have? </h1>';
+    setTimeout(timedQuestion, 5000);	
+    }
+    else if (questionNum == 5) {
+    output.innerHTML = '<h1> ' +input+  '? three children. Can you Imagine yourself with 3 children in a house full of ghosts ? thats really scary.</h1>';
+    document.getElementById("input").value = "";   		// clear text box
+    question =  '<h1> Who wrote the novel IT ?.</h1>';
+    setTimeout(timedQuestion, 6000);	
+    }
+    else if (questionNum == 6) {
+    output.innerHTML = '<h1> ' +input+  '? Stephen King . King has stated that he first conceived the story in 1978, and began writing it in 1981. He finished writing the book in 1985.</h1>';
+    document.getElementById("input").value = "";   		// clear text box
+    question =  '<h1> The Ring(2002) is a remake of which japanese film ? </h1>';
+    setTimeout(timedQuestion, 6000);	
+    }
+    else if (questionNum == 7) {
+    output.innerHTML = '<h1> ' +input+  ' ? The movie is a remake of the 1998 Japanese horror film "Ringu," which is based on the novel of the same name by Koji Suzuki.</h1>';
+    document.getElementById("input").value = "";   		// clear text box
+    question =  '<h1>  How many days the vilain from The Ring(2002) gives until she comes to kill the person ? </h1>';
+    setTimeout(timedQuestion, 6000);	
+    }
+    else if (questionNum == 8) {
+    output.innerHTML = '<h1> ' +input+  '? Seven days.</h1>';
+    document.getElementById("input").value = "";   		// clear text box
+    question =  '<h1> I hope you have scored 100 on our quiz. If not, check out our reviews .</h1>';
+    setTimeout(timedQuestion, 2000);	
+    }
+  
+  }
+
+  var randomNumber = Math.floor(Math.random()*20);
+
+    function newQuote() {
+  var randomNumber = Math.floor(Math.random() * (quotes.length));
+  document.getElementById(" quoteDisplay" ).innerHTML = quotes[randomNumber];
+    }
+   
+
+
+
+function timedQuestion() {
+    output.innerHTML = question;
+}
+
+//push enter key (using jquery), to run bot function.
+$(document).keypress(function(e) {
+  if (e.which == 13) {
+    bot();																						// run bot function when enter key pressed
+    questionNum++;																		// increase questionNum count by 1
+  }
+});
+
+ 
+
+</script>
+<br><br><br><br><br>
+<br><br><br><br><br>
+<br><br><br><br><br>
+<br><br><br><br><br>
+<footer>
+  <div class="container"
+      <div class="footer">
+          <div class="col-sm-4 col-md-5 item">
+              <p><img src="bfi.png" alt="british film institute" width="150" height="80"></p>
+                   </div>
+                   <br><br>
+          <div class="footer">
+              <h5><img src="dre.jpg" alt="drexel horror movie club" width="150" height="80"></h5>
+          </div>
+          <br><br>
+          <div class="footer">
+              <h5><img src="fest.jpg" alt="horror movie festival" width="150" height="80"></h5> 
+          </div>  
+          </div> 
+        </div>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <span>© 2023 gla12horrormovies is not responsible for the content of external sites.</p></span> 
+      </footer>  
+</body>
+</html>
